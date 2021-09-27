@@ -1,8 +1,8 @@
 # Project Name
-# meetmeAPP
+ meetmeAPP
 
 
-Key Features
+# Key Features
 1. Filter events by city.
 2. Show/hide event details.
 3. Specify number of events.
@@ -11,7 +11,7 @@ Key Features
 6. View a chart showing the number of upcoming events by city.
 
 
-User Stories
+# User Stories
 1. As a user, I would like to be able to filter events by city so that I can see the list of events
 that take place in that city.
 2. As a user, I would like to be able to show/hide event details so that I can see more/less
