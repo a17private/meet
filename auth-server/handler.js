@@ -62,10 +62,13 @@ return new Promise((resolve, reject) => {
     };
   })
   .catch((err) => {
-    // Handle error
+       // Handle error
     console.error(err);
     return {
       statusCode: 500,
+      headers: {
+        'Access-Control-Allow-Origin': '*'
+      },
       body: JSON.stringify(err),
     };
   });
