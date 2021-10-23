@@ -33,7 +33,7 @@ export const extractLocations = (events) => {
   
     if (token) {
       removeQuery();
-      const url = 'https://nexs4bu9cf.execute-api.eu-central-1.amazonaws.com/dev/api/get-auth-url' + '/' + token;
+      const url = `https://nexs4bu9cf.execute-api.eu-central-1.amazonaws.com/dev/api/get-events/${token}`
       const result = await axios.get(url);
       if (result.data) {
         var locations = extractLocations(result.data.events);
@@ -62,7 +62,7 @@ export const extractLocations = (events) => {
   const getToken = async (code) => {
     const encodeCode = encodeURIComponent(code);
     const { access_token } = await fetch(
-      'https://nexs4bu9cf.execute-api.eu-central-1.amazonaws.com/dev/api/get-auth-url' + '/' + encodeCode
+      `https://nexs4bu9cf.execute-api.eu-central-1.amazonaws.com/dev/api/token/${encodeCode}`
     )
       .then((res) => {
         return res.json();
