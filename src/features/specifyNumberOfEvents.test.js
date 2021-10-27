@@ -2,7 +2,7 @@ import React from "react";
 import { mount } from "enzyme";
 import { loadFeature, defineFeature } from "jest-cucumber";
 import App from "../App";
-import NumberOfEvents from "../components/NumberOfEvents";
+import NumberOfEvents from "../NumberOfEvents";
 
 
 const feature = loadFeature("./src/features/specifyNumberOfEvents.feature");
