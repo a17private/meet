@@ -8,7 +8,7 @@ import NumberOfEvents from "../NumberOfEvents";
 const feature = loadFeature("./src/features/specifyNumberOfEvents.feature");
 
 defineFeature(feature, (test) => {
-  test("When user hasn’t specified a number, 32 is the default number", ({
+  test("When user hasn’t specified a number, 252 is the default number", ({
     given,
     when,
     then,
@@ -24,9 +24,9 @@ defineFeature(feature, (test) => {
     });
 
     then(
-      "the search result will display 32 results, which is the default number",
+      "the search result will display 252 results, which is the default number",
       () => {
-        expect(AppWrapper.find(".event")).toHaveLength(32);
+        expect(AppWrapper.find(".event")).toHaveLength(252);
       }
     );
   });
@@ -38,7 +38,7 @@ defineFeature(feature, (test) => {
   }) => {
     let AppWrapper;
     given(
-      "the user decides to see a different number n!=32 of events in the search results",
+      "the user decides to see a different number n!=252 of events in the search results",
       () => {
         AppWrapper = mount(<App />);
         AppWrapper.setState({ showWelcomeScreen: false });

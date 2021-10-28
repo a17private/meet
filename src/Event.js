@@ -30,14 +30,16 @@ class Event extends Component {
         <p className="location">
           @{event.summary} | {event.location}
         </p>
+       
+       
         <button
-          className={`show-details-btn ${
-            this.state.collapsed ? "show" : "hide"
-          }`}
+          className="show-details-btn"
           onClick={this.handleClickOnShowDetails}
         >
           Show Details
         </button>
+        
+        
         <div
           className={`extra-details ${this.state.collapsed ? "hide" : "show"}`}
         >
@@ -46,12 +48,18 @@ class Event extends Component {
             See details on Google Calendar
           </a>
           <p className="event-description">{event.description}</p>
+          
+          
+          
           <button
             className="hide-details-btn"
             onClick={this.handleClickOnHideDetails}
           >
             Hide Details
           </button>
+
+
+
         </div>
       </div>
     );
