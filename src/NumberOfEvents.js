@@ -2,15 +2,15 @@ import React, { Component } from "react";
 
 class NumberOfEvents extends Component {
   state = {
-    numberOfEvents: 32,
+    numberOfEvents: 252,
     infoText: "",
   };
 
   updateEventCount = (eventCount) => {
-    if(eventCount < 1 || eventCount > 32) {
+    if(eventCount < 1 || eventCount > 252) {
     return this.setState({
       numberOfEvents: 0,
-      errorText: 'Please select a number between 1-32'
+      errorText: 'Please select a number between 1-252'
     });
   } else {
     this.setState({
