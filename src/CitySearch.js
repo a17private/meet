@@ -10,10 +10,9 @@ class CitySearch extends Component {
     suggestions: [],
     showSuggestions: undefined
   }
-  // update state of city in text input
   handleInputChanged = (event) => {
     const value = event.target.value;
-    this.setState({ showSuggestions: true });
+    this.setState({showSuggestions:true});
     const suggestions = this.props.locations.filter((location) => {
       return location.toUpperCase().indexOf(value.toUpperCase()) > -1;
     });
@@ -26,10 +25,10 @@ class CitySearch extends Component {
       return this.setState({
         query: value,
         suggestions,
-        infoText: ''
+        infoText:''
       });
     }
-  }
+  };
 
   handleItemClicked = (suggestion) => {
     this.setState({
