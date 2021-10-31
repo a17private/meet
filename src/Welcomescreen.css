@@ -9,12 +9,10 @@
     }
     
     .login-button {
-    color: #494949;
     text-transform: uppercase;
     text-decoration: none;
     text-align: center;
     background: #ffffff;
-    border: 4px solid #494949;
     display: inline-block;
     transition: all 0.4s ease 0s;
     min-width: 10rem;
