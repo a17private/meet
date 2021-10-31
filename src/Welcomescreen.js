@@ -6,7 +6,7 @@ return props.showWelcomeScreen ?
 <div className="Welcomescreen">
 <h1 ClassName="title">meet</h1>
 <h4>
-events from around the world at your fingertips
+Events from around the world at your fingertips
 </h4>
 <div className="button_cont" align="center">
 <div class="google-btn">
