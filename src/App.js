@@ -3,6 +3,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import EventList from './EventList';
+import EventGenre from './EventGenre';
 import CitySearch from './CitySearch';
 import NumberOfEvents from "./NumberOfEvents";
 import { getEvents, extractLocations } from './api';
@@ -67,9 +68,7 @@ class App extends Component {
   
   
   render() {
-  const { locations, numberOfEvents } = this.state;
-      if (this.state.showWelcomeScreen === undefined) return <div
-  className="App" />
+  const { locations, numberOfEvents, events } = this.state;
     return (
       <div className="App">
         <h1>meet</h1>
@@ -80,6 +79,9 @@ class App extends Component {
           numberOfEvents={numberOfEvents}
         />       
          <h4>Events in each city</h4>
+
+      <div className="data-vis-wrapper">
+       <EventGenre events={events} />
         <ResponsiveContainer height={400} >
          <ScatterChart
           margin={{
@@ -93,6 +95,7 @@ class App extends Component {
             <Scatter data={this.getData()} fill="#8884d8" />
           </ScatterChart>
         </ResponsiveContainer>
+      </div>
         <EventList events={this.state.events} />
         <Welcomescreen showWelcomeScreen={this.state.showWelcomeScreen}
     getAccessToken={() => { getAccessToken() }} />
