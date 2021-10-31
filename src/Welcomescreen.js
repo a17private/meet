@@ -1,9 +1,9 @@
 import React from "react";
-import './WelcomeScreen.css';
-function WelcomeScreen(props) {
+import './Welcomescreen.css';
+function Welcomescreen(props) {
 return props.showWelcomeScreen ?
 (
-<div className="WelcomeScreen">
+<div className="Welcomescreen">
 <h1>Welcome to the Meet app</h1>
 <h4>
 Log in to see upcoming events around the world for
@@ -39,4 +39,4 @@ Privacy policy
 )
 : null
 }
-export default WelcomeScreen;
+export default Welcomescreen;
