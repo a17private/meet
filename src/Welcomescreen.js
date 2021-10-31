@@ -4,11 +4,9 @@ function Welcomescreen(props) {
 return props.showWelcomeScreen ?
 (
 <div className="Welcomescreen">
-<h1>Welcome to the Meet app</h1>
+<h1 ClassName="title">Meet</h1>
 <h4>
-Log in to see upcoming events around the world for
-full-stack
-developers
+Events from around the world at your fingertips!
 </h4>
 <div className="button_cont" align="center">
 <div class="google-btn">
@@ -25,8 +23,7 @@ rel="nofollow noopener"
 class="btn-text"
 >
 <b>Sign in with google</b>
-</button>
-Page 1 
+</button> 
 </div>
 </div>
 <a
