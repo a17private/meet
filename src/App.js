@@ -10,7 +10,8 @@ import './nprogress.css';
 import Welcomescreen from './Welcomescreen';
 import {  checkToken, getAccessToken } from
 './api';
-import { ScatterChart, Scatter, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer} from 'recharts';
+import { ScatterChart, Scatter, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer,} from 'recharts';
+
 
 
 class App extends Component {
@@ -62,6 +63,8 @@ class App extends Component {
       });
     });
   }
+
+  
   
   render() {
   const { locations, numberOfEvents } = this.state;
