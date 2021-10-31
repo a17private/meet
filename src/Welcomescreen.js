@@ -4,9 +4,9 @@ function Welcomescreen(props) {
 return props.showWelcomeScreen ?
 (
 <div className="Welcomescreen">
-<h1 ClassName="title">Meet</h1>
+<h1 ClassName="title">meet</h1>
 <h4>
-Events from around the world at your fingertips!
+events from around the world at your fingertips
 </h4>
 <div className="button_cont" align="center">
 <div class="google-btn">

@@ -69,14 +69,14 @@ class App extends Component {
   className="App" />
     return (
       <div className="App">
-        <h1>Meet App</h1>
-        <h4>Choose your nearest city</h4>
+        <h1>meet</h1>
+        <h4>choose your nearest city</h4>
         <CitySearch updateEvents={this.updateEvents} locations={locations} />
         <NumberOfEvents
           updateEvents={this.updateEvents}
           numberOfEvents={numberOfEvents}
         />       
-         <h4>Events in each city</h4>
+         <h4>events in each city</h4>
         <ResponsiveContainer height={400} >
          <ScatterChart
           margin={{
