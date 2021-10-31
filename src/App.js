@@ -7,7 +7,7 @@ import CitySearch from './CitySearch';
 import NumberOfEvents from "./NumberOfEvents";
 import { getEvents, extractLocations } from './api';
 import './nprogress.css';
-import WelcomeScreen from './WelcomeScreen';
+import Welcomescreen from './Welcomescreen';
 import {  checkToken, getAccessToken } from
 './api';
 import {
@@ -94,7 +94,7 @@ class App extends Component {
           <Scatter data={this.getData()} fill="#8884d8" />
         </ScatterChart>
         <EventList events={this.state.events} />
-        <WelcomeScreen showWelcomeScreen={this.state.showWelcomeScreen}
+        <Welcomescreen showWelcomeScreen={this.state.showWelcomeScreen}
     getAccessToken={() => { getAccessToken() }} />
     </div>
     );
