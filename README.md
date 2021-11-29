@@ -1,5 +1,7 @@
 # Project Name
  meetmeAPP
+ 
+ Welcome to a new world of adventure with Meet. Get latest updates of what events are happening in each city, Display live data in ergonomical formats of pie charts and line graphs. No registration required, just sign in with Google and you're ready to go!
 
 
 # Key Features
@@ -24,3 +26,9 @@ I viewed the last time I was online.
 can open the app faster.
 6. As a user, I would like to be able to see a chart showing the upcoming events in each
 city so that I know what events are organized in which city.
+
+# Technologies
+1.Jest
+2.Enzyme
+3.Pupeteer
+4.Cucumber
