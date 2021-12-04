@@ -25,7 +25,7 @@ return (
 </p>
 
 {this.state.collapsed && (
-<div className='eventDetails'>
+<div className='eventDetails hide' >
 <h2>About event:</h2>
 <p>{event.description}</p>
 </div>

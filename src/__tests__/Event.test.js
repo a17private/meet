@@ -10,42 +10,24 @@ describe("<Event /> component", () => {
     eventWrapper = shallow(<Event event={event} />);
   });
 
-  test("the element is collapsed by default", () => {
-    eventWrapper.setState({
-      collapsed: true,
-    });
-    expect(eventWrapper.find(".extra-details").hasClass("hide")).toEqual(true);
+  // populate event details
+  test('render correct event details', () => {
+    expect(eventWrapper.find('.event')).toHaveLength(1);
   });
 
-  test("renders summary in the collapsed event element", () => {
-    expect(eventWrapper.find(".summary")).toHaveLength(1);
+  // show event details
+  test('render show event details', () => {
+    eventWrapper.setState({ showhideDetails: true });
+    eventWrapper.find('.show-details-btn').simulate('click');
+    const eventDetails = eventWrapper.find('.eventDetails');
+    expect(eventDetails).toHaveLength(1);
   });
 
-  test("renders date in the collapsed event element", () => {
-    expect(eventWrapper.find(".start-date")).toHaveLength(1);
-  });
-
-  test("renders location in the collapsed event element", () => {
-    expect(eventWrapper.find(".location")).toHaveLength(1);
-  });
-
-  test("renders a button to show details", () => {
-    expect(eventWrapper.find(".show-details-btn")).toHaveLength(1);
-  });
-
-  test("clicking on show details button should show extra details", () => {
-    eventWrapper.setState({
-      collapsed: true,
-    });
-    eventWrapper.find(".show-details-btn").simulate("click");
-    expect(eventWrapper.state("collapsed")).toBe(false);
-  });
-
-  test("clicking on hide details button should hide the extra details", () => {
-    eventWrapper.setState({
-      collapsed: false,
-    });
-    eventWrapper.find(".hide-details-btn").simulate("click");
-    expect(eventWrapper.state("collapsed")).toBe(true);
+  // hide event details
+  test('render hide event details', () => {
+    eventWrapper.setState({ showhideDetails: false });
+    eventWrapper.find('.show-details-btn').simulate('click');
+    const eventDetails = eventWrapper.find('.eventDetails');
+    expect(eventDetails).toHaveLength(0);
   });
 });

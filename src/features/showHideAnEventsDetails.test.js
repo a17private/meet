@@ -17,8 +17,8 @@ defineFeature(feature, (test) => {
     when("a user looks at the list of events", () => {});
 
     then("the user should see that each event is collapsed by default", () => {
-      let EventWrapper = shallow(<Event event={mockData[0]} />);
-      let extraDetails = EventWrapper.find(".event .extra-details");
+      let eventWrapper = shallow(<Event event={mockData[0]} />);
+      let extraDetails = eventWrapper.find(".eventDetails");
       expect(extraDetails.hasClass("hide")).toBe(true);
     });
   });
@@ -28,22 +28,22 @@ defineFeature(feature, (test) => {
     when,
     then,
   }) => {
-    let EventWrapper;
+    let eventWrapper;
     given("a list of collapsed events on the page", () => {
-      EventWrapper = shallow(<Event event={mockData[0]} />);
-      expect(EventWrapper.state("collapsed")).toEqual(true);
+      eventWrapper = shallow(<Event event={mockData[0]} />);
+      expect(eventWrapper.state("collapsed")).toEqual(true);
     });
 
     when(
       "the user clicks on the Show details button of an event element",
       () => {
-        const showDetailsBtn = EventWrapper.find(".show-details-btn");
+        const showDetailsBtn = eventWrapper.find(".show-details-btn");
         showDetailsBtn.simulate("click");
       }
     );
 
     then("the event element expands, showing the event's details", () => {
-      expect(EventWrapper.state("collapsed")).toEqual(false);
+      expect(eventWrapper.state("collapsed")).toEqual(false);
     });
   });
 
@@ -52,21 +52,21 @@ defineFeature(feature, (test) => {
     when,
     then,
   }) => {
-    let EventWrapper;
+    let eventWrapper;
     given("an expanded event element", () => {
-      EventWrapper = shallow(<Event event={mockData[0]} />);
-      EventWrapper.setState({ collapsed: false });
+      eventWrapper = shallow(<Event event={mockData[0]} />);
+      eventWrapper.setState({ collapsed: false });
     });
 
     when(
       "the user clicks on the Hide details button of the event element",
       () => {
-        EventWrapper.find(".hide-details-btn").simulate("click");
+        eventWrapper.find(".hide-details-btn").simulate("click");
       }
     );
 
     then("the event element collapses, hiding the details of the event", () => {
-      expect(EventWrapper.state("collapsed")).toBe(true);
+      expect(eventWrapper.state("collapsed")).toBe(true);
     });
   });  
 });
