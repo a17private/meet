@@ -11,20 +11,20 @@ class NumberOfEvents extends Component {
     const eventCount = event.target.value;
     if (eventCount < 1) {
       return this.setState({
-        eventCount: "",
-        errorText: `Select number between 1 and 252`,
+        eventCount: event.target.value,
+        errorText: `Select number between 1 and 32`,
       });
-    } else if (eventCount > 252) {
+    } else if (eventCount > 32) {
       return this.setState({
-        eventCount: "",
-        errorText: `Select number between 1 and 252`,
+        eventCount: event.target.value,
+        errorText: `Select number between 1 and 32`,
       });
     } else {
       this.setState({
-        eventCount,
+        eventCount: event.target.value,
         errorText: "",
       });
-      // this.props.updateEvents("", eventCount);
+      this.props.updateEvents(null, eventCount);
     }
   };
 
