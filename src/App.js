@@ -19,6 +19,7 @@ class App extends Component {
   state = {
     events: [],
     locations: [],
+    numberOfEvents: 32,
     showWelcomeScreen: undefined
     }
 
@@ -43,7 +44,8 @@ class App extends Component {
         if ((code || isTokenValid) && this.mounted) {
           getEvents().then((events) => {
         if (this.mounted) {
-          this.setState({ events, locations: extractLocations(events) });
+          const slicedEvents = events.slice(0, this.state.numberOfEvents);
+          this.setState({ events: slicedEvents, locations: extractLocations(events) });
          }
       });
     }
