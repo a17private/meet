@@ -24,7 +24,7 @@ return (
 {event.start.dateTime} ({event.start.timeZone})
 </p>
 
-{this.state.collapsed && (
+{this.state.collapsed || (
 <div className='eventDetails hide' >
 <h2>About event:</h2>
 <p>{event.description}</p>
