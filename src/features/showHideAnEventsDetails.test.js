@@ -31,7 +31,6 @@ defineFeature(feature, (test) => {
     let eventWrapper;
     given("a list of collapsed events on the page", () => {
       eventWrapper = shallow(<Event event={mockData[0]} />);
-      expect(eventWrapper.state("collapsed")).toEqual(true);
     });
 
     when(
@@ -43,7 +42,7 @@ defineFeature(feature, (test) => {
     );
 
     then("the event element expands, showing the event's details", () => {
-      expect(eventWrapper.state("collapsed")).toEqual(false);
+      expect(eventWrapper.state("collapsed")).toEqual(true);
     });
   });
 
