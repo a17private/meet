@@ -20,7 +20,7 @@ describe("<Event /> component", () => {
     eventWrapper.setState({ showhideDetails: true });
     eventWrapper.find('.show-details-btn').simulate('click');
     const eventDetails = eventWrapper.find('.eventDetails');
-    expect(eventDetails).toHaveLength(1);
+    expect(eventDetails).toHaveLength(0);
   });
 
   // hide event details
@@ -28,6 +28,6 @@ describe("<Event /> component", () => {
     eventWrapper.setState({ showhideDetails: false });
     eventWrapper.find('.show-details-btn').simulate('click');
     const eventDetails = eventWrapper.find('.eventDetails');
-    expect(eventDetails).toHaveLength(0);
+    expect(eventDetails).toHaveLength(1);
   });
 });

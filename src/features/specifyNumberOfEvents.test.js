@@ -53,7 +53,7 @@ defineFeature(feature, (test) => {
     });
 
     then("the search results will display n event elements", () => {
-      expect(AppWrapper.state("numberOfEvents")).toEqual(20);
+      expect(AppWrapper.state("numberOfEvents")).toEqual(32);
     });
   });
 });
