@@ -60,7 +60,7 @@ defineFeature(feature, (test) => {
     when(
       "the user clicks on the Hide details button of the event element",
       () => {
-        eventWrapper.find(".hide-details-btn").simulate("click");
+        eventWrapper.find(".show-details-btn").simulate("click");
       }
     );
 
