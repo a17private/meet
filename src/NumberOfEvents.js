@@ -25,7 +25,7 @@ class NumberOfEvents extends Component {
         eventCount: event.target.value,
         errorText: "",
       });
-      this.props.updateEvents('all', eventCount);
+      this.props.updateEvents(null, eventCount);
     }
   };
 
