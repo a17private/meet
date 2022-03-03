@@ -8,7 +8,7 @@ import NumberOfEvents from "../NumberOfEvents";
 const feature = loadFeature("./src/features/specifyNumberOfEvents.feature");
 
 defineFeature(feature, (test) => {
-  test("user hasn’t specified a number, 32 is the default number", ({
+  test("When user hasn’t specified a number, 32 is the default number", ({
     given,
     when,
     then,
