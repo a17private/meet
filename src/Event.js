@@ -21,8 +21,9 @@ return (
 <div className="event">
 <h2 className="summary">{event.summary}</h2>
 <p className="start-date">
-{event.start.dateTime} ({event.location})
+{event.start.dateTime} ({event.start.timeZone})
 </p>
+<p>location:{event.location}</p>
 
 {this.state.collapsed || (
 <div className='eventDetails hide' >
